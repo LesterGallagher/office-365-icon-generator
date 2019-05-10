@@ -65,21 +65,28 @@ export const createImage = ({ canvas, url, firstLetter, shape }) => new Promise(
                     x, y, width, height);
             }
 
+            paintCtx.save();
+            paintCtx.globalAlpha = 0.2;
+
             // ring 1
-            paintCtx.fillStyle = '#00000022';
+            paintCtx.fillStyle = '#000000';
             roundRect(paintCtx, x, y + step, width, height, radius, true, false);
 
             // ring 2
-            paintCtx.fillStyle = '#00000022';
+            paintCtx.fillStyle = '#000000';
             roundRect(paintCtx, x + step, y, width, height + step, radius, true, false);
 
             // ring 3
-            paintCtx.fillStyle = '#00000022';
+            paintCtx.fillStyle = '#000000';
             roundRect(paintCtx, x + step, y, width, height + step * 3, radius, true, false);
 
             // ring 4
-            paintCtx.fillStyle = '#00000022';
+            paintCtx.fillStyle = '#000000';
             roundRect(paintCtx, x + step * 2, y - step, width, height + step * 3, radius, true, false);
+
+            paintCtx.globalAlpha = 1;
+            paintCtx.restore();
+
 
             {
                 const x = 80;

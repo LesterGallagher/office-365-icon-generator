@@ -1,1 +1,1 @@
-export const apiUrl = 'http://localhost:3210/api/google-play-store';
+export const apiUrl = 'https://api.esstudio.site/api/google-play-store';

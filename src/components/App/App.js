@@ -3,6 +3,7 @@ import { Button } from 'react-onsenui';
 import logo from './logo.svg';
 import './App.css';
 import Routes from '../Routes/Routes';
+import Loading from '../Loading/Loading'
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +17,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <div
+        >
+          <Loading />
+        </div>
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -30,7 +35,7 @@ class App extends Component {
             Learn React
           </a>
           <Button>Test</Button>
-        </header>
+        </header> */}
         <Routes />
       </div>
     );
